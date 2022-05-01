@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Call wordpress cron route
         run: |
-          curl --request GET --url '${{ secrets.SITE_URL_0 }}/wp-cron.php?doing_wp_cron'
+          curl --request GET --url '${{ secrets.SITE_URL_0 }}/wp-cron.php?doing_wp_cron&siteurl=${{ secrets.SITE_URL }}'
         
